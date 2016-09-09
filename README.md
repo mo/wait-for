@@ -4,17 +4,10 @@ wait-for is a Python script that runs a command every N seconds until the
 command prints something new, prints a specific string or returns a given exit
 code.
 
-```bash
-$ # Suppose OpenSSL (or similar) has announced that they will publish a new
-$ # security fix today and you want a notification when they publish the details.
-$ CHANGELOG="https://www.openssl.org/news/changelog.txt"
-$ wait-for --stdout-change "curl -s $CHANGELOG" ; notify-send "It's published"
+If you just need to wait until the command changes output, you can also use
+```watch --chgexit cmd``` so this script is mostly mostly for when you need
+to wait for a specific exit code / output.
 
-$ # Suppose you have a scruffy old Jenkins server, and you want to wait for the
-$ # next successful build and then deploy that to some a staging environment.
-$ URL="http://jenkins.ecorp.com/job/SOME_JOB_NAME/lastSuccessfulBuild/api/json"
-$ wait-for --stdout-change "curl -s $URL | jq .number" ; deploy-latest-successful
-```
 
 ## License
 
