@@ -45,11 +45,11 @@ def finished_waiting(exitcode, stdout, previous_stdout):
         return True
 
     # check stdout changed / not changed
-    if args.stdout_change != None and not inverted and previous_stdout != None and stdout != previous_stdout:
+    if args.stdout_change and not inverted and previous_stdout != None and stdout != previous_stdout:
         if args.verbose:
             print "found stdout '%s' that was different from previous stdout: '%s'" % (stdout, previous_stdout)
         return True
-    if args.stdout_change != None and inverted and previous_stdout != None and stdout == previous_stdout:
+    if args.stdout_change and inverted and previous_stdout != None and stdout == previous_stdout:
         if args.verbose:
             print "found stdout that was identical to previous run: '%s'" % stdout
         return True
