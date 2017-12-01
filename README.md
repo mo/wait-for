@@ -5,8 +5,8 @@ command prints something new, prints a specific string or returns a given exit
 code.
 
 If you just need to wait until the command changes output, you can also use
-```watch --chgexit cmd``` so this script is mostly mostly for when you need
-to wait for a specific exit code / output.
+```watch --chgexit cmd``` so this script is mostly for when you need to wait
+for a specific exit code / output.
 
 
 ## License

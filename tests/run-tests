@@ -58,7 +58,7 @@ simple-test-wait-for --not --stdout-contains foo "echo -e f\noo"
 
 
 # wait-for something that takes 200 ms should take
-# 400ms - 600ms given a poll interval of 600ms.
+# 400ms - 600ms given a poll interval of 400ms.
 test-wait-for 400 200 400 600
 
 # wait-for something that takes 200 ms should take
