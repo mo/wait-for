@@ -87,7 +87,7 @@ if __name__ == '__main__':
     parser.add_argument('--stdout-change', action='store_true')
     parser.add_argument('--not', action='store_true')
 
-    parser.add_argument('--sleep', type=float, default=2)
+    parser.add_argument('--sleep', type=float, default=2, help="delay between checks (defaults to 2 seconds)")
     parser.add_argument('--verbose', action='store_true')
 
     parser.add_argument('command', metavar='COMMAND', type=str)
